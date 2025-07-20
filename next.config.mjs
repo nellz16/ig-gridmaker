@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
+  experimental: {
+    optimizePackageImports: ['lucide-react']
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -7,8 +11,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
-  },
+    domains: [],
+    unoptimized: true
+  }
 }
 
 export default nextConfig
